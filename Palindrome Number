@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+	// Code to check a palindrome number
+	int n,lastdigit,reverseNumber=0;
+	scanf("%d",&n);
+	int number = n;
+	
+	while(number!=0){
+	    lastdigit = number%10;
+	    reverseNumber = reverse * 10 + lastdigit;
+	    number = number/10;
+	}
+	if(reverseNumber == n)
+	    printf("no is palindrome");
+	else
+	    printf("no is not palindrome");
+	
+}
