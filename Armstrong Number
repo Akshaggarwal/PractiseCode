@@ -3,7 +3,7 @@
 
 // Code to check Armstrong number - sum of power(no of digits) of digits = number
 int main() {
-    int lastnumber,number,power=0,sum=0;
+    int i,number,power=0,sum=0;
     scanf("%d",&number);
     int autonumber = number;
     while(autonumber!=0){
@@ -12,8 +12,8 @@ int main() {
     }
     autonumber = number;
     while(autonumber!=0){
-    lastnumber = autonumber%10;
-    sum=sum+pow(lastnumber,power);
+    i = autonumber%10;
+    sum=sum+pow(i,power);
     autonumber = autonumber/10;
     }
     if(number == sum)
