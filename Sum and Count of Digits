@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    
+	// your code goes here
+	int number,lastdigit,count=0,sum=0;
+	scanf("%d",&number);
+	while(number!=0){
+	    lastdigit = number%10;
+	    count++;
+	    sum = sum +lastdigit;
+	    number = number/10;
+	    
+	}
+	printf("No of digits is %d and sum of digits is %d",count,sum);
+}
