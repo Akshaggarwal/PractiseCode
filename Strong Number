@@ -1,0 +1,29 @@
+#include <stdio.h>
+int findFactorial(int);
+
+int main() {
+	// Code to check Strong Number(Strong Number = Sum of factorial of individual digits)
+	int number,lastdigit,orgNumber,factorial,sum=0;
+	scanf("%d",&number);
+	orgNumber = number;
+	while(number!=0)
+	{
+	    lastdigit = number%10;
+	    factorial = findFactorial(lastdigit);
+	    sum = sum+factorial;
+	    number = number/10;
+	}
+	if(sum == orgNumber)
+	    printf("The number is strong");
+	else
+	    printf("The number is not strong");
+}
+
+int findFactorial(int number){
+    int i,factorial=1;
+    for(i=1;i<=number;i++){
+        factorial = factorial *i;
+    }
+    return factorial;
+} 
+
