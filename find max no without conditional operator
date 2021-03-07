@@ -1,0 +1,27 @@
+#include <stdio.h>
+int findMax(int,int);
+int main() {
+	int a,b,c,max;
+	scanf("%d",&a);
+	scanf("%d",&b);
+	scanf("%d",&c);
+	
+	max = findMax(a,b);
+	max = findMax(max,c);
+	printf("maximum no.is %d",max);
+}
+
+int findMax(int a,int b){
+    int i,z,max;
+    
+    //step1 - Substraction
+    z=a-b;
+    
+    // step 2 - RightShift bitwise and conversion with bitwiswe to obtain 0/1
+    i=(z>>31)&0x1;
+    
+    //step 3 - logic to obtain max no.from ab
+    max = a-(i*z);
+    
+    return max;
+}
